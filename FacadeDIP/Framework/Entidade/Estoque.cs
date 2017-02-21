@@ -9,15 +9,16 @@ namespace Framework.Entidade
         {
             try
             {
-                DateTime date = DateTime.Now;
-                date.AddDays(2);
-
-                string format = String.Format("{0:MM/dd/yyyy", date);
+          
+                Console.WriteLine("---- " + produto + " ----\n");
 
                 Console.WriteLine("O produto " + produto +
                                   "será entregue no endereço " + enderecoEntrega
-                                  + " até as 18h do dia ");
-            }catch(Exception e)
+                                  + " até as 18h do dia " + DateTime.Now.AddDays(2).ToShortDateString() + "\n");
+                
+              
+            }
+            catch (Exception e)
             {
 
                 Console.WriteLine(e.ToString());

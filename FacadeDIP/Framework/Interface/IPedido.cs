@@ -5,5 +5,6 @@
         string Produto { get; set; }
         string Cliente { get; set; }
         string EnderecoEntrega { get; set; }
+        string Fatura { get; set; }
     }
 }

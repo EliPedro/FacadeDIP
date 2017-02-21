@@ -2,6 +2,6 @@
 {
     public interface IFinanceiro
     {
-        void Fatura(string cliente, string produto);
+        void Fatura(string cliente, string produto, string fatura);
     }
 }

@@ -7,16 +7,20 @@ namespace Framework.Entidade
     {
         public void AgendaContato(string cliente, string produto)
         {
-            DateTime date = DateTime.Now;
-            date.AddDays(30);
+            try
+            {
+                Console.WriteLine("\n---- " + cliente + "----\n");
 
-            //string format = String.Format("{0:MM/dd/yyyy", date);
+                Console.WriteLine("Entrar em contato com " + cliente +
+                                  "sobre o produto " + produto +
+                                  " no dia " + DateTime.Now.AddDays(30).ToShortDateString());
 
-            Console.WriteLine("Entrar em contato com " + cliente + 
-                              "sobre o produto " + produto + 
-                              " no dia " );
+                Console.WriteLine("---- ---- ---- ----");
 
-            Console.ReadKey();
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
         }
     }
 }

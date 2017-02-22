@@ -12,7 +12,7 @@ namespace FacadeDIP
 
     class Program
     {
-        public static IKernel ninjectIkernel = new StandardKernel();
+        private static IKernel ninjectIkernel = new StandardKernel();
 
         static void Main(string[] args)
         {
@@ -25,7 +25,7 @@ namespace FacadeDIP
 
             PedidoFacade facade = new PedidoFacade(estoque, financeiro, posVenda);
 
-            IPedido pedido = new Pedido("Notebook", "Rafael Cosentino",
+            IPedido pedido = new Pedido("Notebook", "Rafael Santos",
                                        "Av Brigadeiro Faria Lima , 1571," +
                                        "São Paulo , SP");
            facade.RegistraPedido(pedido);

@@ -12,7 +12,7 @@ namespace Framework.Entidade
                 Console.WriteLine("\n---- " + cliente + "----\n");
 
                 Console.WriteLine("Entrar em contato com " + cliente +
-                                  "sobre o produto " + produto +
+                                  " sobre o produto " + produto +
                                   " no dia " + DateTime.Now.AddDays(30).ToShortDateString());
 
                 Console.WriteLine("---- ---- ---- ----");

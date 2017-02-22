@@ -18,7 +18,7 @@ namespace Framework.Entidade
         public void RegistraPedido(IPedido _pedido)
         {
             this._Estoque.EnviaProduto(_pedido.Produto, _pedido.EnderecoEntrega);
-            this._Financeiro.Fatura(_pedido.Cliente, _pedido.Produto, _pedido.Fatura);
+            this._Financeiro.Fatura(_pedido.Cliente, _pedido.Produto);
             this._PosVenda.AgendaContato(_pedido.Cliente, _pedido.Produto);         
         }
    }

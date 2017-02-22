@@ -1,5 +1,4 @@
 ﻿using Framework.Entidade;
-using Framework.Help;
 using Framework.Interface;
 using Ninject;
 using System;
@@ -13,7 +12,7 @@ namespace FacadeDIP
 
     class Program
     {
-          public static IKernel ninjectIkernel = new StandardKernel();
+        public static IKernel ninjectIkernel = new StandardKernel();
 
         static void Main(string[] args)
         {
@@ -23,13 +22,12 @@ namespace FacadeDIP
             var estoque = ninjectIkernel.Get<IEstoque>();
             var financeiro = ninjectIkernel.Get<IFinanceiro>();
             var posVenda = ninjectIkernel.Get<IPosVenda>();
-            var ihelp = ninjectIkernel.Get<IHelp>();
 
             PedidoFacade facade = new PedidoFacade(estoque, financeiro, posVenda);
 
             IPedido pedido = new Pedido("Notebook", "Rafael Cosentino",
                                        "Av Brigadeiro Faria Lima , 1571," +
-                                       "São Paulo , SP", ihelp.AlfanumericoAleatorio());
+                                       "São Paulo , SP");
            facade.RegistraPedido(pedido);
             
            Console.ReadKey();
@@ -41,7 +39,6 @@ namespace FacadeDIP
             ninjectIkernel.Bind<IEstoque>().To<Estoque>();
             ninjectIkernel.Bind<IFinanceiro>().To<Financeiro>();
             ninjectIkernel.Bind<IPosVenda>().To<PosVenda>();
-            ninjectIkernel.Bind<IHelp>().To<Help>();
         }       
     }
 }

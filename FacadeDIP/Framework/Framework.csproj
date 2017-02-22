@@ -45,10 +45,8 @@
     <Compile Include="Entidade\Pedido.cs" />
     <Compile Include="Entidade\PedidoFacade.cs" />
     <Compile Include="Entidade\PosVenda.cs" />
-    <Compile Include="Help\Help.cs" />
     <Compile Include="Interface\IEstoque.cs" />
     <Compile Include="Interface\IFinanceiro.cs" />
-    <Compile Include="Interface\IHelp.cs" />
     <Compile Include="Interface\IPedido.cs" />
     <Compile Include="Interface\IPosVenda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

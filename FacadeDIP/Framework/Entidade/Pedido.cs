@@ -2,7 +2,7 @@
 
 namespace Framework.Entidade
 {
-    public class Pedido : IPedido
+    public class Pedido
     {
         public string Produto { get; set; }
         public string Cliente { get; set; }

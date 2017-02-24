@@ -47,7 +47,6 @@
     <Compile Include="Entidade\PosVenda.cs" />
     <Compile Include="Interface\IEstoque.cs" />
     <Compile Include="Interface\IFinanceiro.cs" />
-    <Compile Include="Interface\IPedido.cs" />
     <Compile Include="Interface\IPosVenda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

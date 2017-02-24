@@ -15,11 +15,11 @@ namespace Framework.Entidade
             _PosVenda = posvenda;
         }
 
-        public void RegistraPedido(IPedido _pedido)
+        public void RegistraPedido(Pedido pedido)
         {
-            this._Estoque.EnviaProduto(_pedido.Produto, _pedido.EnderecoEntrega);
-            this._Financeiro.Fatura(_pedido.Cliente, _pedido.Produto);
-            this._PosVenda.AgendaContato(_pedido.Cliente, _pedido.Produto);         
+            this._Estoque.EnviaProduto(pedido.Produto, pedido.EnderecoEntrega);
+            this._Financeiro.Fatura(pedido.Cliente, pedido.Produto);
+            this._PosVenda.AgendaContato(pedido.Cliente, pedido.Produto);         
         }
    }
 }
